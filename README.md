@@ -24,7 +24,7 @@ The Power Window Control System project utilizes the STM microcontroller and Fre
 
 Your system must contain the following hardware:
 
-1. **STM32 NUCLEO-F446**:  
+1. **STM32F429ZI Discovery Board**:  
    The microcontroller used for system control and task management.
    
 2. **Top and Bottom Limit Switches**:  
@@ -147,8 +147,11 @@ To set up the Power Window Control System, follow these steps:
 3. **Configuration**:
    - Ensure that the limit switches and push buttons are properly connected and configured in the firmware.
    - Test the system to verify the manual and auto open/close functions, window lock, and jam protection features.
+  
+## Demo Video
+
+Watch the [project demo video](https://drive.google.com/file/d/1FrLtD-PpE5R4Ts9w88u1IADd4_t-dpPY/view?usp=sharing) to see the Power Window Control System in action.
 
 ## Conclusion
 
 The Power Window Control System is designed to provide a reliable and efficient solution for automating window operations. By adhering to the outlined requirements, the system will meet user expectations for functionality, performance, and reliability.
-
