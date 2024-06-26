@@ -1,0 +1,2 @@
+../Core/Src/led.c:24:6:LED_Init	2
+../Core/Src/led.c:49:6:LED_Output	2

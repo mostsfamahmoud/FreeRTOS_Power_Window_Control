@@ -1,0 +1,2 @@
+../Core/Src/dc_motor.c:24:6:DcMotor_Init	1
+../Core/Src/dc_motor.c:56:6:DcMotor_Rotate	5

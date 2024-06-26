@@ -1,0 +1,3 @@
+../Core/Src/limit_switch.c:40:6:LimitSwitch_Init	2
+../Core/Src/limit_switch.c:76:9:LimitSwitch_IsPressed	2
+../Core/Src/limit_switch.c:108:20:LimitSwitch_GetState	2
