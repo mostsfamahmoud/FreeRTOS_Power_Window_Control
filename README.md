@@ -7,18 +7,41 @@ The Power Window Control System project utilizes the STM microcontroller and Fre
 ## System Basic Features
 
 1. **Manual Open/Close Function**:  
-   The window opens or closes continuously while the power window switch is pressed or pulled.
+   When the power window switch is pushed or pulled continuously, the window opens or closes until the switch is released.
    
 2. **One-Touch Auto Open/Close Function**:  
-   A short press or pull on the power window switch fully opens or closes the window.
+   When the power window switch is pushed or pulled shortly, the window fully opens or closes.
    
 3. **Window Lock Function**:  
-   Activating the window lock switch disables the opening and closing of all windows except the driver’s window.
+   When the window lock switch is turned on, the opening and closing of all windows except the driver’s window is disabled.
    
 4. **Jam Protection Function**:  
-   Automatically stops and reverses the window if an obstacle is detected during the one-touch auto-close operation.
+   This function automatically stops the power window and moves it downward about 0.5 second if foreign matter gets caught in the window during one touch auto close operation.
 
-## Functional Requirements
+   ![System Basic Features](Images/systemFeatures.jpg)
+   
+## Hardware Requirements
+
+Your system must contain the following hardware:
+
+1. **STM32 NUCLEO-F446**:  
+   The microcontroller used for system control and task management.
+   
+2. **Top and Bottom Limit Switches**:  
+   To prevent the window from moving beyond its upper and lower bounds.
+   
+3. **DC Motor**:  
+   Used to indicate the operation of the window.
+   
+4. **Push Buttons**:  
+   To operate the up and down movement of the window on both the passenger and driver sides.
+   
+5. **ON/OFF Switch**:  
+   To lock the passenger panel from the driver panel.
+
+## Software Requirements
+
+### Functional Requirements
 
 1. **Task Management**:
    - **Lock Task**: Monitors the lock button state and adjusts the priority of the driver task accordingly.
@@ -42,7 +65,7 @@ The Power Window Control System project utilizes the STM microcontroller and Fre
 6. **Error Handling**:  
    The system detects and handles errors such as motor failure or sensor malfunctions, logging error conditions for debugging and troubleshooting.
 
-## Non-Functional Requirements
+### Non-Functional Requirements
 
 1. **Performance**:  
    The system responds to user inputs within an acceptable time frame. Task scheduling is optimized to minimize latency and maximize throughput.
@@ -101,6 +124,29 @@ The Power Window Control System project utilizes the STM microcontroller and Fre
      - Detects short and long presses to determine the mode of operation.
      - Sends motor control commands to the queue.
    - **Priority**: LOW (1).
+  
+## Installation
+
+To set up the Power Window Control System, follow these steps:
+
+1. **Hardware Setup**:
+   - Connect the STM32 microcontroller to the top and bottom limit switches.
+   - Connect the DC motor to the microcontroller to control window movement.
+   - Attach push buttons for the up and down controls on both passenger and driver sides.
+   - Connect the ON/OFF switch for the window lock functionality.
+
+2. **Software Setup**:
+   - Clone this repository to your local machine:
+     ```sh
+     git clone https://github.com/mostsfamahmoud/FreeRTOS_Power_Window_Control.git
+     ```
+   - Open the project in STM32CubeIDE.
+   - Configure the FreeRTOS settings as required.
+   - Compile and upload the firmware to the microcontroller.
+
+3. **Configuration**:
+   - Ensure that the limit switches and push buttons are properly connected and configured in the firmware.
+   - Test the system to verify the manual and auto open/close functions, window lock, and jam protection features.
 
 ## Conclusion
 
